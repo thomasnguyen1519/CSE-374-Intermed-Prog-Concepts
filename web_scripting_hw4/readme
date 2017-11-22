@@ -1,0 +1,10 @@
+
+# Tom Nguyen                                                                                                  
+# October 20, 2017                                                                                            
+# CSE 374                                                                                                     
+# Homework 3: readme 
+
+
+
+To remove the extraneous URLs that were not part of the rankings, I implemented a combination of extra sed and egrep commands. After extracting the URLs, I piped the output to a sed command that replaced the extraneous URLs with the empty string but then this left over newline characters. I got rid of the newline characters by using a grep command that captured all the lines that began with a lowercase a-z character.
+

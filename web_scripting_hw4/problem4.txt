@@ -1,0 +1,10 @@
+
+
+# Tom Nguyen                                                                                                  
+# October 20, 2017                                                                                            
+# CSE 374                                                                                                     
+# Homework 3: problem4.txt
+
+Q1) Without knowing the exact functionality, it looks like the produce-scatterplot.gnuplot begins creating the graph by labelling the x-axis with "Rank". Then labelling the y-axis with "Size (Bytes)". Next it sets the range of values for the x-axis to be between 0 and 100. Following that, it renames the output file to "scatterplot.eps". Lastly, it takes the data from the file "results.txt" using the 1st through 3rd columns of the file, leaving the file title as the empty string, then creates a plot of points.  
+
+Q2) From the scatterplot, it looks like there's a softcap at around 300000 bytes for all of the top 100 websites, with the exception of a few outliers. There isn't necessarily a linear relationship with the rank and size of the websites. Most are just contained within 300 kB. Like the beginning of the spec said, this seems practical because if the site is popular then it garners more traffic and each time someone loads the website, it will need to make requests to the server and therefore you would want to minimize the amount of information that you need to request.

@@ -1,0 +1,59 @@
+Script started on Fri 27 Oct 2017 10:27:19 PM PDT
+]0;ngutt96@klaatu:~/hw4[?1034h[ngutt96@klaatu hw4]$ gdb gasp
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux 7.11-67.el7
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from gasp...done.
+(gdb) break main
+Breakpoint 1 at 0x400865: file gasp.c, line 31.
+(gdb) break 64
+Breakpoint 2 at 0x400a11: file gasp.c, line 64.
+(gdb) run "CSE" test
+Starting program: /homes/ngutt96/hw4/gasp "CSE" test
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-196.el7.x86_64
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffde68) at gasp.c:31
+31	    int ignore_case = 0;       // stores if the -i option was toggled
+(gdb) p targ_string
+$1 = 0x400c30 <__libc_csu_init> "AWA\211\377AVI\211\366AUI\211\325ATL\215%\310\021 "
+(gdb) continue
+Continuing.
+
+Breakpoint 2, main (argc=3, argv=0x7fffffffde68) at gasp.c:64
+64	            if (file != NULL) {
+(gdb) bt
+#0  main (argc=3, argv=0x7fffffffde68) at gasp.c:64
+(gdb) list
+59	    }
+60	    if (arg_offset < argc) {
+61	        for (int i = arg_offset; i < argc; i++) {
+62	            char *file_name = argv[i];
+63	            FILE *file = fopen(file_name, "r");
+64	            if (file != NULL) {
+65	                find_matches(file, file_name, targ_string, ignore_case,
+66	                             line_count);
+67	                fclose(file);
+68	            } else {
+(gdb) p file_name
+$2 = 0x7fffffffe12b "test"
+(gdb) p file
+$3 = (FILE *) 0x603010
+(gdb) continue
+Continuing.
+[Inferior 1 (process 2186) exited normally]
+(gdb) quit
+]0;ngutt96@klaatu:~/hw4[ngutt96@klaatu hw4]$ exit
+exit
+
+Script done on Fri 27 Oct 2017 10:30:32 PM PDT

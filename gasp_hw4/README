@@ -1,0 +1,6 @@
+Tom Nguyen
+October 26, 2017
+CSE 374
+Homework 4: README
+
+I believe that I was able to implement reading input from stdin (first bullet point) and enhancing my program to deal with arbitrarily long input lines from files (third bullet point), which I decided to leave in my original gasp program too because it seemed practical.

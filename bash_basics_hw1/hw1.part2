@@ -1,0 +1,25 @@
+Tom Nguyen
+October 5, 2017
+CSE 374 A
+Homework 1
+
+1) The wc command displays the newline, word, and byte count statistics of each file. The -l option will make the command only print the newline count.
+
+2)  188  245 9234 /etc/passwd
+
+3) kill [options] [process_ids] 
+
+4) The $HOME variable stores the path to the current home directory.
+
+5) $PATH - stores the path to the stored commands
+   $USER - gets set upon login; stores the name of the current logged in user
+
+6) find [directories] [expression]
+
+7) The ‘which’ command finds the path to programs like commands, which seems particularly useful when you alias commands. Whereas the ‘find’ command searches for files recursively in a directory and its subdirectories.
+
+8) The command “echo Hello World!" will print the argument "Hello World!" to standard output (STDOUT). The command “echo Hello World! > something” will redirect the STDOUT of the echo command, in this case “Hello World!”, to a file named “something”.
+
+9) If you execute the command “echo more text > something”, the command will overwrite the existing file (if applicable) with a new file named “something” containing the text “more text”. 
+
+10) If you execute the command “echo yet more text >> something” when there already is an existing file named “something”, it will append the text “yet more text” to the existing file named “something” on a new line. If there is no pre-existing “something” file then it will be created and will contain the arguments of the echo command.

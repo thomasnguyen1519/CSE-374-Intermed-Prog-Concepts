@@ -1,0 +1,53 @@
+Script started on Thu 05 Oct 2017 11:25:04 AM PDT
+]0;ngutt96@klaatu:~[?1034h[ngutt96@klaatu ~]$ echo "Hello world"
+Hello world
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ passwd
+Changing password for user ngutt96.
+Changing password for ngutt96.
+(current) UNIX password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ date
+Thu Oct  5 11:25:34 PDT 2017
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ echo ~
+/homes/ngutt96
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ cd ~
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ ls
+hw0.script  hw1.part1
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ mkdir temp
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ mv temp files
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ cd files
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ date > now
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ cp now before
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ ls -l
+total 8
+-rw-rw-r-- 1 ngutt96 ngutt96 29 Oct  5 11:26 before
+-rw-rw-r-- 1 ngutt96 ngutt96 29 Oct  5 11:26 now
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ touch temp
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ mv temp test
+]0;ngutt96@klaatu:~/files[ngutt96@klaatu files]$ cd ..
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ rm -r files
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ echo "It's a secret"'!' > secretfile
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ chmod a-w secretfile
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ cat >> secretfile
+bash: secretfile: Permission denied
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ chmod a-r secretfile
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ cat secretfile
+cat: secretfile: Permission denied
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ uname -v
+#1 SMP Wed Sep 13 18:41:56 EDT 2017
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ ps -u ngutt96
+  PID TTY          TIME CMD
+ 4403 ?        00:00:00 sshd
+ 4410 pts/2    00:00:00 bash
+ 4465 pts/2    00:00:00 script
+ 4467 pts/2    00:00:00 script
+ 4468 pts/3    00:00:00 bash
+ 4682 pts/3    00:00:00 ps
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ grep ngutt96 /etc/passwd
+[01;31m[Kngutt96[m[K:x:26869:26869::/homes/[01;31m[Kngutt96[m[K:/bin/bash
+]0;ngutt96@klaatu:~[ngutt96@klaatu ~]$ exit
+exit
+
+Script done on Thu 05 Oct 2017 11:28:16 AM PDT

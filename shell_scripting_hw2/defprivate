@@ -1,0 +1,6 @@
+# Tom Nguyen
+# October 12, 2017
+# CSE 374
+# Homework 2: Problem 2
+
+alias private='chmod -R g=u,o-rwx'

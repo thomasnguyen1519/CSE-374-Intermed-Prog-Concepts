@@ -1,0 +1,24 @@
+Tom Nguyen
+October 12, 2017
+CSE 374
+Homework 2: Problem 1
+
+To produce the output "tweet" with an echo command, you just have to pass it as a literal string ('tweet') as the argument (echo 'tweet'). Next we will execute that same command again but redirect the stdout stream to a file named 'tweet' (echo 'tweet' > 'tweet'). This will create a file named 'tweet' with the text contents 'tweet'. From here we can use the command 'cat tweet' for the shell to interpret and display the 'tweet' file's contents on the screen (ie. 'tweet'). Next, we will create a new directory with the arbitrary name, 'something' (mkdir something). Next we move the 'tweet' file into the 'something' folder to isolate it and then change the current directory to the 'something' folder (mv tweet something; cd something). Next we can list all the files to produce 'tweet' (ls). Now we use a grep on the 'tweet' file and look for the pattern 'tweet' to again produce 'tweet' in the output again (grep tweet tweet). Lastly, we will create an alias to nothing with the name 'tweet' (alias 'tweet'=). We execute that new alias ('tweet') then use the command history substitution to produce 'tweet' for the last time (!!).
+ 
+
+[ngutt96@klaatu ~]$ echo tweet
+tweet
+[ngutt96@klaatu ~]$ echo tweet > tweet
+[ngutt96@klaatu ~]$ cat tweet
+tweet
+[ngutt96@klaatu ~]$ mkdir something
+[ngutt96@klaatu ~]$ mv tweet something
+[ngutt96@klaatu ~]$ cd something
+[ngutt96@klaatu something]$ ls
+tweet
+[ngutt96@klaatu something]$ grep tweet tweet
+tweet
+[ngutt96@klaatu something]$ alias tweet=
+[ngutt96@klaatu something]$ tweet
+[ngutt96@klaatu something]$ !!
+tweet

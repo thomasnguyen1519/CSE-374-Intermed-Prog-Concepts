@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Tom Nguyen
+# October 12, 2017
+# CSE 374
+# Homework 2: Problem 4
+
+
+if [ $# -lt 2 ]                     # if the number of arguments is less than 2
+then
+    echo "$0: need at least 2 arguments: file1 file2 ..."
+    exit 1
+fi
+
+first="$1"
+shift
+date >> "$first"
+wc -l "$@" | sed -e 's/^[ \t]*//' >> "$first"        # word count on all the remaining arguments then remove the leading white space
+if [ $# == 1 ]                                       # if there was only one remaining argument
+then
+    wc -l "$@" | sed s/"$@"/total/ >> "$first"       # does one more wc and replaces the file name with "total"
+fi
+exit 0

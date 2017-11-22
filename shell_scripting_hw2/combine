@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Tom Nguyen
+# October 12, 2017
+# CSE 374
+# Homework 2: Problem 3
+
+
+if [ $# -lt 2 ]              # if the number of arguments is less than 2
+then
+    echo "$0: needs 2 or more arguments: file1 file2 ..." 1>&2
+    exit 1
+elif [ -e "$1" ]             # if the name of the first argument exists in the filesystem
+then
+    echo "Error: first file exists" 1>&2
+    exit 1
+fi
+
+out="$1"
+shift
+cat "$@" 2> "$out"
+exit 0

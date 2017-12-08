@@ -19,8 +19,8 @@
      Generally, Rationals will be in the form: n / d.
 
      Params
-         n: int to set the Rational numerator to
-         d: int to set the Rational denominator to
+         n: int to initialize the Rational numerator
+         d: int to initialize the Rational denominator
   */
   Rational::Rational(int n, int d) {
       int pos_n = (n >= 0) ? n : -n;
@@ -34,24 +34,26 @@
       Default contructor that initializes a new Rational to 0/1.
   */
   Rational::Rational() {
-      Rational(0);
+      this->num = 0;
+      this->denom = 1;
   }
 
   /*
       Constructs a new Rational to a specified integer value.
 
       Params
-          n: int to set the Rational value to as n/1
+          n: int to set the Rational to as n/1
   */
   Rational::Rational(int n) {
-      Rational(n, 1);
+      this->num = n;
+      this->denom = 1;
   }
 
   /*
       Returns the numerator of the Rational. Does not alter Rational's members.
 
       Returns
-          int: copy of the Rational object's numerator
+          int: copy of the Rational's numerator
   */
   int Rational::n() const {
       int copy = num;
@@ -63,7 +65,7 @@
       Does not alter Rational's members.
 
       Returns
-          int: copy of the Rational object's denominator.
+          int: copy of the Rational's denominator.
   */
   int Rational::d() const {
       int copy = denom;
@@ -147,7 +149,7 @@
           m: second int to be considered in the gcd algorithm
 
       Returns
-          int: the determined greatest common multiple
+          int: the determined greatest common divisor
   */
   static int gcd(int n, int d) {
       return d == 0 ? n : gcd(d, n % d);
